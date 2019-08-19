@@ -24,26 +24,26 @@ function _relatedlinks(rlinkmsgid) {
 		return '#alink '+(alink_i - 1)+'#';
 	});
 	var relatedid = new Array();
-	msg = msg.replace(/(^|>)([^<]+)(?=<|$)/ig, function($1, $2, $3) {
-		for(var j = 0; j < relatedlink.length; j++) {
-			if(relatedlink[j] && !relatedid[j]) {
-				if(relatedlink[j]['surl'] != '') {
-					var ra = '<a href="'+relatedlink[j]['surl']+'" target="_blank" class="relatedlink">'+relatedlink[j]['sname']+'</a>';
-						alink[alink_i] = ra;
-						ra = '#alink '+alink_i+'#';
-						alink_i++;
-				} else {
-					var ra = '<strong><font color="#FF0000">'+relatedlink[j]['sname']+'</font></strong>';
-				}
-				var $rtmp = $3;
-				$3 = $3.replace(relatedlink[j]['sname'], ra);
-				if($3 != $rtmp) {
-					relatedid[j] = 1;
-				}
-			}
-		}
-		return $2 + $3;
-    	});
+	// msg = msg.replace(/(^|>)([^<]+)(?=<|$)/ig, function($1, $2, $3) {
+	// 	for(var j = 0; j < relatedlink.length; j++) {
+	// 		if(relatedlink[j] && !relatedid[j]) {
+	// 			if(relatedlink[j]['surl'] != '') {
+	// 				var ra = '<a href="'+relatedlink[j]['surl']+'" target="_blank" class="relatedlink">'+relatedlink[j]['sname']+'</a>';
+	// 					alink[alink_i] = ra;
+	// 					ra = '#alink '+alink_i+'#';
+	// 					alink_i++;
+	// 			} else {
+	// 				var ra = '<strong><font color="#FF0000">'+relatedlink[j]['sname']+'</font></strong>';
+	// 			}
+	// 			var $rtmp = $3;
+	// 			$3 = $3.replace(relatedlink[j]['sname'], ra);
+	// 			if($3 != $rtmp) {
+	// 				relatedid[j] = 1;
+	// 			}
+	// 		}
+	// 	}
+	// 	return $2 + $3;
+    // 	});
 
 	for(var k in alink) {
 		msg = msg.replace('#alink '+k+'#', alink[k]);

@@ -12,6 +12,7 @@ if(!defined('IN_DISCUZ')) {
 }
 
 function _isLocalip($ip) {
+	return false;
 	$iplong = ip2long($ip);
 	return ($iplong >= 167772160 && $iplong <= 184549375) ||
 		($iplong >= 2886729728 && $iplong <= 2887778303) ||

@@ -995,7 +995,7 @@ $lang = array (
   'comment_comment_noexist' => '抱歉，要评论的文章不存在',
   'comment_comment_notallowed' => '该文章不允许评论',
 
-  'post_subject_toolong' => '抱歉，您的标题超过 80 个字符修改标题长度',
+  'post_subject_toolong' => '抱歉，您的标题超过 150 个字节修改标题长度',
   'post_message_tooshort' => '抱歉，您的帖子小于 {minpostsize} 个字符的限制',
 
   'no_privilege_realname' => '抱歉，您需要填写真实姓名后才能进行当前操作，<a href="home.php?mod=spacecp&ac=profile">点击这里设置真实姓名</a>',
@@ -1016,8 +1016,8 @@ $lang = array (
   'location_activation' => '您的帐号处于未激活状态，点击进行激活',
   'login_succeed_inactive_member' => '欢迎您回来，{usergroup} {username}。您的帐号处于非激活状态，现在将转入控制面板',
   'login_succeed_password_change' => '您的账户存在安全隐患，建议立即修改密码',
-  'login_question_empty' => '请选择安全提问以及填写正确的答案',
-  'login_question_invalid' => '抱歉，安全提问答案填写错误',
+  'login_question_empty' => '请选择安全提问以及填写正确的答案 (如果您是 2019年01月24日 之前设置的安全提问，请选择 “未设置” 登录，之后再重新设置安全提问)',
+  'login_question_invalid' => '抱歉，安全提问答案填写错误 (如果您是 2019年01月24日 之前设置的安全提问，请选择 “未设置” 登录，之后再重新设置安全提问)',
   'login_invalid' => '登录失败，您还可以尝试 {loginperm} 次',
   'login_password_invalid' => '抱歉，您输入的密码有误',
   'register_disable' => '抱歉，目前站点禁止新用户注册',
